@@ -61,9 +61,6 @@ public class ChracterModule : MonoBehaviour
             animator.Play("Hit");
 
             StartCoroutine(UpdateRecoverTime());
-
-            Vector3 dir = (transform.position - collision.transform.position).normalized;
-            rigid.AddForce(dir * 2.5f, ForceMode2D.Impulse);
         }
     }
 

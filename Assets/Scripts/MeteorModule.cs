@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class MeteorModule : MonoBehaviour
 {
+    public static MeteorModule Get { get; set; } = null;
+
     public Rigidbody2D MeteorRigid = null;
+
+    private void Awake()
+       => Get = this;
 
     private void Update()
     {
